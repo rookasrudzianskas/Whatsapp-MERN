@@ -12,15 +12,27 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="sidebar__header">
+                    <Avatar src="https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg" />
                 <div className="sidebar__headerRight">
                     <IconButton>
                         <DonutLargeIcon />
                     </IconButton>
 
+                    <IconButton>
+                        <ChatIcon />
+                    </IconButton>
+
+                    <IconButton>
+                        <MoreVertIcon />
+                    </IconButton>
+
                 </div>
+            </div>
 
-                <div className="sidebar__headerLeft">
-
+            <div className="sidebar__search">
+                <div className="sidebar__searchContainer">
+                    <SearchOutlined />
+                    <input type="text" placeholder="Start a new chat..."/>
                 </div>
             </div>
         </div>
