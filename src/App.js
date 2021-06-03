@@ -4,7 +4,9 @@ import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <div className="app">
-      <Sidebar />
+        <div className="app__body">
+            <Sidebar />
+        </div>
     </div>
   );
 }
