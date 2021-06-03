@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      Whatsapp 🚀
+      <h1>Whatsapp 🚀</h1>
     </div>
   );
 }
