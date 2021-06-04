@@ -7,7 +7,8 @@ const Chat = ({messages}) => {
 
     const [input, setInput] = useState();
 
-    const sendMessage = () => {
+    const sendMessage = (e) => {
+        e.preventDefault();
 
     }
 
