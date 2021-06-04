@@ -2,15 +2,19 @@ import React, {useState} from 'react';
 import "./styles/Chat.css";
 import { IconButton, Avatar } from '@material-ui/core';
 import {AttachFile, InsertEmoticon, Mic, MicOutlined, MoreVert, SearchOutlined} from '@material-ui/icons';
-
+import axios from "../axios";
 const Chat = ({messages}) => {
 
     const [input, setInput] = useState();
-
     const sendMessage = (e) => {
         e.preventDefault();
-
-    }
+        axios.post('/messages/new', {
+            message: input,
+            name: "Dart Weider",
+            timestamp: "Far away in the galaxy",
+            received: false,
+        });
+    };
 
     return (
         <div className="chat">
