@@ -3,7 +3,7 @@ import "./styles/Chat.css";
 import { IconButton, Avatar } from '@material-ui/core';
 import {AttachFile, InsertEmoticon, Mic, MicOutlined, MoreVert, SearchOutlined} from '@material-ui/icons';
 
-const Chat = () => {
+const Chat = ({messages}) => {
 
     const [input, setInput] = useState();
 
@@ -35,32 +35,17 @@ const Chat = () => {
             </div>
 
             <div className="chat__body">
-                <p className="chat__message ">
-                    <span className="chat__name">Rokas</span>
+                {messages.map((message) => (
+                <p className={`chat__message ${message.received && "chat__receiver"}`}>
+                    <span className="chat__name">{message.name}</span>
 
-                    This is a message  or something like that
+                    {message.message}
                     <span className="chat__timestamp">
-                        23rd 2020
+                        {message.timestamp}
                     </span>
                 </p>
 
-                <p className="chat__message chat__receiver">
-                    <span className="chat__name">Rokas</span>
-
-                    This is a message  or something like that
-                    <span className="chat__timestamp">
-                        23rd 2020
-                    </span>
-                </p>
-
-                <p className="chat__message">
-                    <span className="chat__name">Rokas</span>
-
-                    This is a message  or something like that
-                    <span className="chat__timestamp">
-                        23rd 2020
-                    </span>
-                </p>
+                ))}
 
             </div>
 
