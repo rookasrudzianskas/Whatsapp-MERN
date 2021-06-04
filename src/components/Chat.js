@@ -14,6 +14,7 @@ const Chat = ({messages}) => {
             timestamp: "Far away in the galaxy",
             received: false,
         });
+        setInput("");
     };
 
     return (
