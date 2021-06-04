@@ -25,9 +25,16 @@ function App() {
 
         const channel = pusher.subscribe('messages');
         channel.bind('inserted', (newMessage) => {
-            alert(JSON.stringify(newMessage));
+            // alert(JSON.stringify(newMessage));
             setMessages([...messages, newMessage] );
         });
+
+        // unsubscribes from the listener, because we do not want to keep the old listerner, just new one attached
+        return () => {
+            channel.unbind_all();
+            channel.unsubscribe();
+        };
+
     }, [messages]);
 
     console.log(messages);
