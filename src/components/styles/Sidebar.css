@@ -39,8 +39,22 @@
     height: 35px;
     border-radius: 20px;
 }
+.sidebar__searchContainer > .MuiSvgIcon-root {
+    color: gray;
+    padding: 10px;
+}
 
-
+.sidebar__searchContainer > input {
+    border:  none;
+    outline: none;
+    margin-left: 10px;
+    flex: 1;
+}
+.sidebar__chats {
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+}
 
 
 
